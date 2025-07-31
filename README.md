@@ -1,5 +1,9 @@
 # TryHackMe Challenge Solutions & Analysis
 
+
+[![TryHackMe Profile](https://img.shields.io/badge/TryHackMe-View_Profile-red?style=for-the-badge&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/felipecampolinacc)
+
+
 Welcome to my personal repository where I document my **solutions**, **methodologies**, and **technical analysis** of various challenges from [TryHackMe](https://tryhackme.com/). This repository serves both as a learning journal and a resource for others interested in cybersecurity, ethical hacking, and penetration testing.
 
 ---
