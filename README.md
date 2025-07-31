@@ -25,7 +25,7 @@ The rooms cover topics such as:
 ##  Structure
 Each folder corresponds to a TryHackMe room, with its own write-up and artifacts.
 
-## 🛠 Tools Commonly Used
+##  Tools Commonly Used
 
 - `nmap`, `rustscan`
 - `gobuster`, `ffuf`
