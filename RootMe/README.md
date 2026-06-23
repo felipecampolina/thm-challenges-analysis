@@ -5,7 +5,7 @@
 **Date:** September 2025  
 **Platform:** TryHackMe  
 **Difficulty:** Easy  
-**Challenge URL:** https://tryhackme.com/room/rootme  
+**Challenge URL:** [https://tryhackme.com/room/rootme ](https://tryhackme.com/room/rrootme) 
 
 ---
 
