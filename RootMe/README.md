@@ -196,5 +196,11 @@ System hardening, patching, and secure coding practices are mandatory.
 
 ---
 
+## Final Thoughts
+
+RootMe is a concise introduction to a complete web-to-root attack path. The room clearly demonstrates how an exposed upload feature and one dangerous SUID assignment can turn a small application weakness into total system compromise.
+
+---
+
 ## Challenge Rating
 ⭐⭐⭐ (Excellent for beginners in Web Exploitation and Linux Privilege Escalation)

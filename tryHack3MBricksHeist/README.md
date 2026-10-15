@@ -220,6 +220,12 @@ Searched for the wallet address in blockchain explorers and identified the assoc
 
 This assessment demonstrated a complete attack chain against the "Bricks Heist" challenge, highlighting the importance of securing WordPress installations and monitoring for unauthorized services. The vulnerabilities exploited in this challenge are common in real-world environments, emphasizing the need for proactive security measures.
 
-**Challenge Rating:** ⭐⭐⭐⭐ (Great for intermediate-level penetration testers)
+## Final Thoughts
+
+Bricks Heist is a focused demonstration of how an exposed content-management system can lead to code execution and reveal a wider compromise. Its combination of vulnerability research, service analysis, data decoding, and threat attribution makes it a useful intermediate investigation.
+
+## Challenge Rating
+
+⭐⭐⭐⭐ (Great for intermediate-level penetration testers)
 
 ---

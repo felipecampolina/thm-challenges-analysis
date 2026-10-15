@@ -509,7 +509,13 @@ Smag Grotto demonstrates how several individually preventable weaknesses can for
 
 The central lesson is that privileged processes must never trust files controlled by less-privileged accounts. Sensitive traffic captures should also be treated like credentials: stored outside the web root, access-controlled, and removed when no longer required.
 
-**Challenge Rating:** 4/5 (Excellent practice for packet analysis, command injection, cron abuse, and Linux privilege escalation)
+## Final Thoughts
+
+Smag Grotto rewards careful enumeration and shows how several moderate-looking exposures can combine into a critical attack chain. The progression from packet analysis to command injection, cron abuse, and an unsafe sudo rule makes it especially useful for practicing correlation across web and Linux security layers.
+
+## Challenge Rating
+
+⭐⭐⭐⭐ (Excellent practice for packet analysis, command injection, cron abuse, and Linux privilege escalation)
 
 ---
 

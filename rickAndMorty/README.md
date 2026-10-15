@@ -355,11 +355,13 @@ This assessment aligns with several security frameworks:
 - **NIST Cybersecurity Framework:** Identify, Protect, Detect, Respond, Recover
 - **CIS Controls:** Inventory Management, Access Control, Data Protection
 
-### Final Thoughts
+## Final Thoughts
 
 The "Pickle Rick" challenge effectively demonstrates why layered security (defense in depth) is crucial. A single vulnerability might be contained, but the combination of multiple weaknesses led to complete system compromise. This reinforces the importance of comprehensive security programs that address people, processes, and technology.
 
-**Challenge Rating:** ⭐⭐⭐⭐ (Excellent for beginners, solid practice for OSCP preparation)
+## Challenge Rating
+
+⭐⭐⭐⭐ (Excellent for beginners, solid practice for OSCP preparation)
 
 ---
 

@@ -141,8 +141,10 @@ The vulnerabilities demonstrated in this challenge mirror common issues found in
 1. **Unencrypted Traffic:** Many systems still transmit sensitive data in plaintext.
 2. **Weak Authentication:** Default or weak credentials are often used for networked devices.
 
-### Final Thoughts
+## Final Thoughts
 
 The "Security Footage" challenge effectively demonstrates the importance of digital forensics in recovering critical evidence. This reinforces the need for comprehensive security measures to protect networked devices and sensitive data.
 
-**Challenge Rating:** ⭐⭐⭐ (Excellent for intermediate-level forensic analysis)
+## Challenge Rating
+
+⭐⭐⭐ (Excellent for intermediate-level forensic analysis)
