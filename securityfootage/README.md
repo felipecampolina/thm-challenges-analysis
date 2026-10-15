@@ -1,15 +1,26 @@
-# Security Assessment Report – Security Footage (TryHackMe)
+<a id="top"></a>
 
-**Analyst:** Felipe Campolina  
-**Role:** Cybersecurity Analyst / Digital Forensics Investigator  
-**Date:** July 2025  
-**Platform:** TryHackMe  
-**Difficulty:** Medium  
-**Challenge URL:** https://tryhackme.com/room/securityfootage
+# 📹 Security Assessment Report — Security Footage
+
+[![Platform](https://img.shields.io/badge/Platform-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/room/securityfootage)
+![Difficulty](https://img.shields.io/badge/Difficulty-Medium-FDCB6E?style=flat-square)
+![Category](https://img.shields.io/badge/Category-Digital%20Forensics-6C5CE7?style=flat-square)
+![Evidence](https://img.shields.io/badge/Frames-541-0984E3?style=flat-square)
+
+> **Mission profile:** analyze a packet capture, reconstruct a video stream frame by frame and isolate the decisive evidence.
+
+| [🏠 Repository](../README.md) | [🎯 Objective](#-objective) | [🔬 Findings](#-findings) | [🧪 Detailed Steps](#-detailed-steps) | [🛡️ Remediation](#️-remediation-recommendations) |
+| :---: | :---: | :---: | :---: | :---: |
+
+| 👤 Analyst | 🎭 Role | 📅 Date | 📈 Difficulty |
+| :--- | :--- | :---: | :---: |
+| Felipe Campolina | Cybersecurity Analyst / Digital Forensics Investigator | July 2025 | 🟡 Medium |
+
+**Platform / Room:** [TryHackMe — Security Footage](https://tryhackme.com/room/securityfootage)
 
 ---
 
-## Executive Summary
+## 📌 Executive Summary
 
 This report documents a comprehensive forensic analysis of the "Security Footage" challenge from TryHackMe. The objective was to recover security footage from a compromised camera system by analyzing a `.pcap` file and reconstructing video frames.
 
@@ -22,7 +33,7 @@ This report documents a comprehensive forensic analysis of the "Security Footage
 
 ---
 
-## Objective
+## 🎯 Objective
 
 The goal of this forensic analysis was to simulate a real-world scenario where digital forensics is used to recover critical evidence from network traffic. Main objectives included:
 
@@ -32,7 +43,7 @@ The goal of this forensic analysis was to simulate a real-world scenario where d
 
 ---
 
-## Methodology
+## 🧭 Methodology
 
 1. **Network Traffic Analysis**:
    - Used Wireshark to analyze the `.pcap` file and identify patterns in the video stream.
@@ -45,7 +56,7 @@ The goal of this forensic analysis was to simulate a real-world scenario where d
 
 ---
 
-## Findings
+## 🔬 Findings
 
 ### Network Traffic Analysis
 
@@ -63,7 +74,7 @@ Frame 229 was identified as containing critical information relevant to the inve
 
 ---
 
-## Tools Used
+## 🧰 Tools Used
 
 - **Wireshark**: For analyzing network traffic and identifying the video stream.
 - **Python**: For writing a script to extract JPEG images from the video stream.
@@ -71,7 +82,7 @@ Frame 229 was identified as containing critical information relevant to the inve
 
 ---
 
-## Detailed Steps
+## 🚶 Detailed Steps
 
 1. **Load `.pcap` File in Wireshark**:
    - Opened the `.pcap` file in Wireshark.
@@ -88,14 +99,14 @@ Frame 229 was identified as containing critical information relevant to the inve
 
 ---
 
-## Results
+## 🏁 Results
 
 - Successfully extracted and reconstructed 541 frames from the video stream.
 - Identified key evidence in frame 229, which contained critical information.
 
 ---
 
-## Remediation Recommendations
+## 🛡️ Remediation Recommendations
 
 ### Immediate Actions
 
@@ -118,7 +129,7 @@ Frame 229 was identified as containing critical information relevant to the inve
 
 ---
 
-## Conclusion & Lessons Learned
+## 🧠 Conclusion & Lessons Learned
 
 ### Technical Summary
 
@@ -141,10 +152,20 @@ The vulnerabilities demonstrated in this challenge mirror common issues found in
 1. **Unencrypted Traffic:** Many systems still transmit sensitive data in plaintext.
 2. **Weak Authentication:** Default or weak credentials are often used for networked devices.
 
-## Final Thoughts
+## 💭 Final Thoughts
 
 The "Security Footage" challenge effectively demonstrates the importance of digital forensics in recovering critical evidence. This reinforces the need for comprehensive security measures to protect networked devices and sensitive data.
 
-## Challenge Rating
+## ⭐ Challenge Rating
 
 ⭐⭐⭐ (Excellent for intermediate-level forensic analysis)
+
+---
+
+<div align="center">
+
+[⬆️ Back to top](#top) · [🏠 Explore all write-ups](../README.md)
+
+`Authorized lab` · `Educational use only`
+
+</div>

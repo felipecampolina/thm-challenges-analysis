@@ -1,15 +1,26 @@
-#  Security Assessment Report – Pickle Rick (TryHackMe)
+<a id="top"></a>
 
-**Analyst:** Felipe Campolina  
-**Role:** Cybersecurity Analyst / Penetration Tester  
-**Date:** March 2025  
-**Platform:** TryHackMe  
-**Difficulty:** Easy  
-**Challenge URL:** https://tryhackme.com/room/picklerick  
+# 🥒 Security Assessment Report — Pickle Rick
+
+[![Platform](https://img.shields.io/badge/Platform-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/room/picklerick)
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-00B894?style=flat-square)
+![Category](https://img.shields.io/badge/Category-Web%20%2B%20Linux-6C5CE7?style=flat-square)
+![Impact](https://img.shields.io/badge/Impact-Root%20Access-D63031?style=flat-square)
+
+> **Mission profile:** enumerate a themed web server, recover credentials, exploit command execution and escalate to root.
+
+| [🏠 Repository](../README.md) | [🎯 Objective](#-objective) | [🔎 Recon](#-1-initial-reconnaissance) | [⛓️ Timeline](#️-attack-timeline) | [🛡️ Remediation](#️-remediation-recommendations) |
+| :---: | :---: | :---: | :---: | :---: |
+
+| 👤 Analyst | 🎭 Role | 📅 Date | 📈 Difficulty |
+| :--- | :--- | :---: | :---: |
+| Felipe Campolina | Cybersecurity Analyst / Penetration Tester | March 2025 | 🟢 Easy |
+
+**Platform / Room:** [TryHackMe — Pickle Rick](https://tryhackme.com/room/picklerick)
 
 ---
 
-##  Executive Summary
+## 📌 Executive Summary
 
 This report documents a comprehensive penetration test of the "Pickle Rick" challenge from TryHackMe. The objective was to exploit a Rick and Morty themed web server to retrieve three hidden ingredients that would help Rick transform back from a pickle into human form.
 
@@ -24,7 +35,7 @@ This report documents a comprehensive penetration test of the "Pickle Rick" chal
 
 ---
 
-##  Objective
+## 🎯 Objective
 
 The goal of this penetration test was to simulate a real-world attack scenario. Main objectives included:
 
@@ -35,7 +46,7 @@ The goal of this penetration test was to simulate a real-world attack scenario. 
 
 ---
 
-##  1. Initial Reconnaissance
+## 🔎 1. Initial Reconnaissance
 
 Performed a full TCP scan using `nmap`:
 
@@ -50,7 +61,7 @@ nmap -sC -sV -p- 10.10.10.123 -oN full-scan.txt
 
 ---
 
-##  2. Web Application Analysis
+## 🌐 2. Web Application Analysis
 
 ### Initial Web Server Assessment
 
@@ -90,7 +101,7 @@ Inspecting `/login.php` source code revealed hardcoded credentials in HTML comme
 
 ---
 
-##  3. Authentication Bypass & Command Injection Exploitation
+## ⚡ 3. Authentication Bypass & Command Injection Exploitation
 
 ### Successful Authentication
 
@@ -144,7 +155,7 @@ awk '{ print }' Sup3rS3cretPickl3Ingred.txt
 
 ---
 
-##  4. Privilege Escalation Analysis
+## 🔐 4. Privilege Escalation Analysis
 
 ### Sudo Configuration Assessment
 
@@ -203,7 +214,7 @@ sudo awk '{ print }' /home/rick/second\ ingredients
 
 ---
 
-## 🔍 5. File System Enumeration and Root Access
+## 📂 5. File System Enumeration and Root Access
 
 Performed recursive search for last ingredient:
 
@@ -223,7 +234,7 @@ sudo awk '{ print }' /root/3rd.txt
 
 ---
 
-##  Summary of Findings
+## 🔬 Summary of Findings
 
 | Step                  | Technique Used                  | Result                          |
 | --------------------- | ------------------------------- | ------------------------------- |
@@ -235,7 +246,7 @@ sudo awk '{ print }' /root/3rd.txt
 
 ---
 
-##  Comprehensive Vulnerability Assessment
+## 📊 Comprehensive Vulnerability Assessment
 
 | **Vulnerability** | **Classification** | **Risk Level** | **CVSS Score** | **Impact** |
 |-------------------|-------------------|----------------|----------------|------------|
@@ -246,7 +257,7 @@ sudo awk '{ print }' /root/3rd.txt
 
 ---
 
-##  Remediation Recommendations
+## 🛡️ Remediation Recommendations
 
 ### Immediate Actions (Critical Priority)
 
@@ -279,7 +290,7 @@ sudo awk '{ print }' /root/3rd.txt
 
 ---
 
-##  Attack Timeline
+## ⛓️ Attack Timeline
 
 | **Time** | **Phase** | **Action** | **Result** |
 |----------|-----------|------------|------------|
@@ -293,7 +304,7 @@ sudo awk '{ print }' /root/3rd.txt
 
 ---
 
-##  Technical Skills Demonstrated
+## 🧰 Technical Skills Demonstrated
 
 ### Reconnaissance & Enumeration
 - Network port scanning with Nmap
@@ -320,7 +331,7 @@ sudo awk '{ print }' /root/3rd.txt
 
 ---
 
-##  Conclusion & Lessons Learned
+## 🧠 Conclusion & Lessons Learned
 
 ### Technical Summary
 
@@ -355,15 +366,21 @@ This assessment aligns with several security frameworks:
 - **NIST Cybersecurity Framework:** Identify, Protect, Detect, Respond, Recover
 - **CIS Controls:** Inventory Management, Access Control, Data Protection
 
-## Final Thoughts
+## 💭 Final Thoughts
 
 The "Pickle Rick" challenge effectively demonstrates why layered security (defense in depth) is crucial. A single vulnerability might be contained, but the combination of multiple weaknesses led to complete system compromise. This reinforces the importance of comprehensive security programs that address people, processes, and technology.
 
-## Challenge Rating
+## ⭐ Challenge Rating
 
 ⭐⭐⭐⭐ (Excellent for beginners, solid practice for OSCP preparation)
 
 ---
 
 *This report demonstrates practical application of ethical hacking techniques in a controlled environment. All activities were performed on authorized systems for educational purposes.*
+
+<div align="center">
+
+[⬆️ Back to top](#top) · [🏠 Explore all write-ups](../README.md)
+
+</div>
 

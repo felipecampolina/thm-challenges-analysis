@@ -1,15 +1,26 @@
-# Security Assessment Report – RootMe (TryHackMe)
+<a id="top"></a>
 
-**Analyst:** Felipe Campolina  
-**Role:** Cybersecurity Analyst / Penetration Tester  
-**Date:** September 2025  
-**Platform:** TryHackMe  
-**Difficulty:** Easy  
-**Challenge URL:** [https://tryhackme.com/room/rootme ](https://tryhackme.com/room/rrootme) 
+# 🌱 Security Assessment Report — RootMe
+
+[![Platform](https://img.shields.io/badge/Platform-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/room/rrootme)
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-00B894?style=flat-square)
+![Category](https://img.shields.io/badge/Category-Web%20%2B%20Linux-6C5CE7?style=flat-square)
+![Impact](https://img.shields.io/badge/Impact-Root%20Access-D63031?style=flat-square)
+
+> **Mission profile:** turn an unrestricted file upload into a reverse shell, then abuse a SUID Python binary for full system compromise.
+
+| [🏠 Repository](../README.md) | [🎯 Objective](#-objective) | [🧭 Walkthrough](#-step-by-step-walkthrough) | [🏁 Results](#-results) | [🛡️ Remediation](#️-remediation-recommendations) |
+| :---: | :---: | :---: | :---: | :---: |
+
+| 👤 Analyst | 🎭 Role | 📅 Date | 📈 Difficulty |
+| :--- | :--- | :---: | :---: |
+| Felipe Campolina | Cybersecurity Analyst / Penetration Tester | September 2025 | 🟢 Easy |
+
+**Platform / Room:** [TryHackMe — RootMe](https://tryhackme.com/room/rrootme)
 
 ---
 
-## Executive Summary
+## 📌 Executive Summary
 
 This report documents the compromise of the **RootMe** machine on TryHackMe.  
 Key issues identified and exploited:  
@@ -22,7 +33,7 @@ Key issues identified and exploited:
 
 ---
 
-## Objective
+## 🎯 Objective
 
 - Enumerate open ports and services.  
 - Discover hidden directories.  
@@ -32,7 +43,7 @@ Key issues identified and exploited:
 
 ---
 
-## Methodology
+## 🧭 Methodology
 
 1. Reconnaissance with Nmap  
 2. Directory enumeration with Gobuster  
@@ -43,7 +54,7 @@ Key issues identified and exploited:
 
 ---
 
-## Findings
+## 🔬 Findings
 
 ### Reconnaissance
 
@@ -82,7 +93,7 @@ Key issues identified and exploited:
 
 ---
 
-## Step-by-Step Walkthrough
+## 🚶 Step-by-Step Walkthrough
 
 ### 1) Recon – Service & Version Detection
 ```bash
@@ -149,7 +160,7 @@ cat /root/root.txt
 
 ---
 
-## Tools Used
+## 🧰 Tools Used
 - **nmap** – Service discovery and enumeration  
 - **Gobuster** – Directory brute forcing  
 - **Netcat** – Reverse shell listener  
@@ -157,13 +168,13 @@ cat /root/root.txt
 
 ---
 
-## Results
+## 🏁 Results
 - **user.txt →** THM{y0u_g0t_a_sh3ll}  
 - **root.txt →** THM{pr1v1l3g3_3sc4l4t10n}  
 
 ---
 
-## Remediation Recommendations
+## 🛡️ Remediation Recommendations
 1. **Fix File Upload Functionality**  
    - Validate file extensions and MIME types.  
    - Store uploads outside of the web root.  
@@ -183,7 +194,7 @@ cat /root/root.txt
 
 ---
 
-## Conclusion & Lessons Learned
+## 🧠 Conclusion & Lessons Learned
 This challenge demonstrated a full attack chain from enumeration to root compromise.  
 
 Key takeaways:
@@ -196,11 +207,21 @@ System hardening, patching, and secure coding practices are mandatory.
 
 ---
 
-## Final Thoughts
+## 💭 Final Thoughts
 
 RootMe is a concise introduction to a complete web-to-root attack path. The room clearly demonstrates how an exposed upload feature and one dangerous SUID assignment can turn a small application weakness into total system compromise.
 
 ---
 
-## Challenge Rating
+## ⭐ Challenge Rating
 ⭐⭐⭐ (Excellent for beginners in Web Exploitation and Linux Privilege Escalation)
+
+---
+
+<div align="center">
+
+[⬆️ Back to top](#top) · [🏠 Explore all write-ups](../README.md)
+
+`Authorized lab` · `Educational use only`
+
+</div>

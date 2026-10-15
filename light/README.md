@@ -1,16 +1,23 @@
-# Security Assessment Report - Light (TryHackMe)
+<a id="top"></a>
 
-**Analyst:** Felipe Campolina  
-**Role:** Cybersecurity Analyst / Penetration Tester  
-**Platform:** TryHackMe  
-**Room:** Light  
-**Category:** Web/Application Security - Database Exploitation  
-**Environment:** Kali Linux  
-**Target:** `10.67.142.120`  
-**Exposed service:** `1337/TCP`  
-**Database:** SQLite 3.31.1  
-**Status:** Completed - 3/3 answers recovered  
-**Challenge URL:** https://tryhackme.com/room/lightroom
+# 💡 Security Assessment Report — Light
+
+[![Platform](https://img.shields.io/badge/Platform-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/room/lightroom)
+![Category](https://img.shields.io/badge/Category-SQL%20Injection-6C5CE7?style=flat-square)
+![Database](https://img.shields.io/badge/Database-SQLite-0984E3?style=flat-square&logo=sqlite&logoColor=white)
+![Status](https://img.shields.io/badge/Status-3%2F3%20Recovered-00B894?style=flat-square)
+
+> **Mission profile:** compromise a custom TCP database application by understanding its query construction and bypassing its case-sensitive defenses.
+
+| [🏠 Repository](../README.md) | [🎯 Objectives](#-objectives) | [🧭 Walkthrough](#-step-by-step-walkthrough) | [⛓️ Attack Chain](#️-attack-chain) | [🛡️ Remediation](#️-remediation-recommendations) |
+| :---: | :---: | :---: | :---: | :---: |
+
+| 👤 Analyst | 🎭 Role | 🧪 Environment | 🎯 Target | ✅ Status |
+| :--- | :--- | :--- | :--- | :---: |
+| Felipe Campolina | Cybersecurity Analyst / Penetration Tester | Kali Linux · SQLite 3.31.1 | `10.67.142.120:1337/TCP` | 3/3 answers recovered |
+
+**Platform / Room:** [TryHackMe — Light](https://tryhackme.com/room/lightroom)
+**Category:** Web/Application Security — Database Exploitation
 
 > TryHackMe target addresses are assigned per lab session. Replace `10.67.142.120` with the address shown in the active room if it differs.
 
@@ -18,7 +25,7 @@
 
 ---
 
-## Executive Summary
+## 📌 Executive Summary
 
 This assessment documents the exploitation of the **Light** database application, a custom TCP service exposed on port `1337`. The application accepted a username and returned the associated password from an SQLite database.
 
@@ -37,7 +44,7 @@ The vulnerability allowed unrestricted read access to the SQLite catalog and app
 
 ---
 
-## Objectives
+## 🎯 Objectives
 
 - Confirm that the custom TCP service was reachable.
 - Understand how the application processed usernames.
@@ -50,7 +57,7 @@ The vulnerability allowed unrestricted read access to the SQLite catalog and app
 
 ---
 
-## Environment and Tools
+## 🧰 Environment and Tools
 
 | Component | Purpose |
 | --- | --- |
@@ -64,7 +71,7 @@ The room supplied `smokey` as the initial username and recommended connecting to
 
 ---
 
-## Methodology
+## 🧭 Methodology
 
 1. Validate TCP port `1337` with Nmap.
 2. Connect directly with Netcat and establish a behavioral baseline.
@@ -79,7 +86,7 @@ The room supplied `smokey` as the initial username and recommended connecting to
 
 ---
 
-## Step-by-Step Walkthrough
+## 🚶 Step-by-Step Walkthrough
 
 ### 1. Initial Reconnaissance
 
@@ -541,7 +548,7 @@ THM{SQLit3_InJ3cTion_is_SimplE_nO?}
 
 ---
 
-## Attack Chain
+## ⛓️ Attack Chain
 
 ```text
 TCP reconnaissance
@@ -588,7 +595,7 @@ Flag recovered from admintable
 
 ---
 
-## Payload Reference
+## 🧪 Payload Reference
 
 | Objective | Payload |
 | --- | --- |
@@ -610,7 +617,7 @@ The backslashes in this Markdown table only escape the `|` table delimiter. The 
 
 ---
 
-## Findings
+## 🔬 Findings
 
 | Finding | Classification | Severity | Demonstrated impact |
 | --- | --- | --- | --- |
@@ -635,7 +642,7 @@ The lab did not require or demonstrate database writes, record modification, ope
 
 ---
 
-## Questions and Answers
+## ✅ Questions and Answers
 
 | # | TryHackMe question | Answer |
 | --- | --- | --- |
@@ -645,7 +652,7 @@ The lab did not require or demonstrate database writes, record modification, ope
 
 ---
 
-## Remediation Recommendations
+## 🛡️ Remediation Recommendations
 
 ### 1. Use Parameterized Queries
 
@@ -695,7 +702,7 @@ Integration tests should confirm that quotes, SQL operators, keywords, comment s
 
 ---
 
-## Conclusion
+## 🏁 Conclusion
 
 The Light room demonstrated a complete SQL injection investigation against a constrained custom TCP interface. Direct interaction with Netcat was more informative than prolonged service fingerprinting, and a single quote exposed both unsafe query construction and the appended `LIMIT 30` clause.
 
@@ -705,7 +712,7 @@ The final breakthrough was recognizing that the first returned row was not neces
 
 ---
 
-## Lessons Learned
+## 🧠 Lessons Learned
 
 - Custom services may be understood faster through direct protocol interaction than automated fingerprinting.
 - Database errors can reveal query delimiters, appended clauses, and backend characteristics.
@@ -718,14 +725,20 @@ The final breakthrough was recognizing that the first returned row was not neces
 
 ---
 
-## Final Thoughts
+## 💭 Final Thoughts
 
 Light is a compact but well-structured SQL injection exercise. Its value comes from requiring more than a basic authentication bypass: the room teaches controlled vulnerability confirmation, blacklist analysis, database fingerprinting, schema discovery, one-column data extraction, and multi-row aggregation. The final flag location rewards systematic enumeration instead of guesswork.
 
-## Challenge Rating
+## ⭐ Challenge Rating
 
 ⭐⭐⭐⭐ (Excellent practical introduction to Boolean and UNION-based SQLite injection, filter bypass, and database enumeration)
 
 ---
 
 *This report documents authorized testing performed in a controlled TryHackMe environment for educational purposes only.*
+
+<div align="center">
+
+[⬆️ Back to top](#top) · [🏠 Explore all write-ups](../README.md)
+
+</div>

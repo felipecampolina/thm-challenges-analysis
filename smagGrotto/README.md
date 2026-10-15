@@ -1,15 +1,26 @@
-# Security Assessment Report - Smag Grotto (TryHackMe)
+<a id="top"></a>
 
-**Analyst:** Felipe Campolina  
-**Role:** Cybersecurity Analyst / Penetration Tester  
-**Date:** June 2026  
-**Platform:** TryHackMe  
-**Difficulty:** Easy  
-**Challenge URL:** https://tryhackme.com/room/smaggrotto  
+# 📬 Security Assessment Report — Smag Grotto
+
+[![Platform](https://img.shields.io/badge/Platform-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/room/smaggrotto)
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-00B894?style=flat-square)
+![Category](https://img.shields.io/badge/Category-Web%20%2B%20Linux-6C5CE7?style=flat-square)
+![Impact](https://img.shields.io/badge/Impact-Root%20Access-D63031?style=flat-square)
+
+> **Mission profile:** recover credentials from exposed traffic, exploit blind command injection and chain two privilege-escalation paths.
+
+| [🏠 Repository](../README.md) | [🎯 Objective](#-objective) | [🧭 Walkthrough](#-step-by-step-walkthrough) | [⛓️ Attack Chain](#️-attack-chain) | [🛡️ Remediation](#️-remediation-recommendations) |
+| :---: | :---: | :---: | :---: | :---: |
+
+| 👤 Analyst | 🎭 Role | 📅 Date | 📈 Difficulty |
+| :--- | :--- | :---: | :---: |
+| Felipe Campolina | Cybersecurity Analyst / Penetration Tester | June 2026 | 🟢 Easy |
+
+**Platform / Room:** [TryHackMe — Smag Grotto](https://tryhackme.com/room/smaggrotto)
 
 ---
 
-## Executive Summary
+## 📌 Executive Summary
 
 This report documents the complete compromise of the **Smag Grotto** machine on TryHackMe. The assessment began with network and web enumeration, which exposed a packet capture through a public mail directory. Analysis of the unencrypted HTTP traffic revealed valid helpdesk credentials and a development virtual host.
 
@@ -29,7 +40,7 @@ After authentication, a blind OS command injection vulnerability provided an ini
 
 ---
 
-## Objective
+## 🎯 Objective
 
 - Enumerate the target's network services and web application.
 - Discover and analyze exposed application artifacts.
@@ -41,7 +52,7 @@ After authentication, a blind OS command injection vulnerability provided an ini
 
 ---
 
-## Methodology
+## 🧭 Methodology
 
 1. Network and service enumeration with Nmap
 2. Web technology and vulnerability enumeration with WhatWeb and Nikto
@@ -55,7 +66,7 @@ After authentication, a blind OS command injection vulnerability provided an ini
 
 ---
 
-## Step-by-Step Walkthrough
+## 🚶 Step-by-Step Walkthrough
 
 ### 1. Initial Reconnaissance
 
@@ -373,7 +384,7 @@ cat /root/root.txt
 
 ---
 
-## Results
+## 🏁 Results
 
 - **User flag:** `iusGorV7EbmxM5AuIe2w499msaSuqU3`
 - **Root flag:** `uJr6zRgetaniyHVRqqL58uRasybBKz2T`
@@ -383,7 +394,7 @@ cat /root/root.txt
 
 ---
 
-## Attack Chain
+## ⛓️ Attack Chain
 
 ```text
 Nmap / Web Enumeration
@@ -421,7 +432,7 @@ Root Shell
 
 ---
 
-## Summary of Findings
+## 🔬 Summary of Findings
 
 | Phase | Technique | Result |
 | --- | --- | --- |
@@ -435,7 +446,7 @@ Root Shell
 
 ---
 
-## Comprehensive Vulnerability Assessment
+## 📊 Comprehensive Vulnerability Assessment
 
 | Vulnerability | Classification | Risk | Impact |
 | --- | --- | --- | --- |
@@ -448,7 +459,7 @@ Root Shell
 
 ---
 
-## Tools Used
+## 🧰 Tools Used
 
 - **Nmap** - Port scanning and service detection
 - **cURL** - HTTP header inspection and command-injection verification
@@ -463,7 +474,7 @@ Root Shell
 
 ---
 
-## Remediation Recommendations
+## 🛡️ Remediation Recommendations
 
 ### Immediate Actions
 
@@ -503,20 +514,26 @@ Root Shell
 
 ---
 
-## Conclusion & Lessons Learned
+## 🧠 Conclusion & Lessons Learned
 
 Smag Grotto demonstrates how several individually preventable weaknesses can form a complete compromise chain. A publicly accessible packet capture disclosed credentials, those credentials unlocked a command-injection flaw, and insecure privileged automation enabled movement from the web account to a local user. Finally, an unsafe sudo rule converted user access into full root control.
 
 The central lesson is that privileged processes must never trust files controlled by less-privileged accounts. Sensitive traffic captures should also be treated like credentials: stored outside the web root, access-controlled, and removed when no longer required.
 
-## Final Thoughts
+## 💭 Final Thoughts
 
 Smag Grotto rewards careful enumeration and shows how several moderate-looking exposures can combine into a critical attack chain. The progression from packet analysis to command injection, cron abuse, and an unsafe sudo rule makes it especially useful for practicing correlation across web and Linux security layers.
 
-## Challenge Rating
+## ⭐ Challenge Rating
 
 ⭐⭐⭐⭐ (Excellent practice for packet analysis, command injection, cron abuse, and Linux privilege escalation)
 
 ---
 
 *This report documents authorized activity performed in a controlled TryHackMe environment for educational purposes only.*
+
+<div align="center">
+
+[⬆️ Back to top](#top) · [🏠 Explore all write-ups](../README.md)
+
+</div>

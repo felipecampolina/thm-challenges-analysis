@@ -1,19 +1,28 @@
-# Investigation Write-Up - Have a Break (TryHackMe)
+<a id="top"></a>
 
-**Analyst:** Felipe Campolina  
-**Role:** Security Investigator  
-**Platform:** TryHackMe  
-**Room:** Have a Break  
-**Case:** Project HAVEABREAK  
-**Reference:** EC-2026-0847-CZ  
-**Status:** Completed - 6/6 answers accepted  
-**Challenge URL:** https://tryhackme.com/room/haveabreak
+# 🍫 Investigation Write-Up — Have a Break
+
+[![Platform](https://img.shields.io/badge/Platform-TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/room/haveabreak)
+![Type](https://img.shields.io/badge/Type-Investigation-6C5CE7?style=flat-square)
+![Status](https://img.shields.io/badge/Status-6%2F6%20Validated-00B894?style=flat-square)
+![Case](https://img.shields.io/badge/Case-HAVEABREAK-E17055?style=flat-square)
+
+> **Case file:** email forensics, network intelligence, GEOINT, OSINT, log analysis and insider-threat investigation.
+
+| [🏠 Repository](../README.md) | [🎯 Objectives](#-objectives) | [🧪 Investigation](#-step-by-step-investigation) | [⏱️ Timeline](#️-consolidated-timeline) | [✅ Answers](#-questions-and-validated-answers) |
+| :---: | :---: | :---: | :---: | :---: |
+
+| 👤 Analyst | 🎭 Role | 📁 Case | 🔖 Reference | ✅ Status |
+| :--- | :--- | :--- | :--- | :---: |
+| Felipe Campolina | Security Investigator | Project HAVEABREAK | `EC-2026-0847-CZ` | 6/6 answers accepted |
+
+**Platform / Room:** [TryHackMe — Have a Break](https://tryhackme.com/room/haveabreak)
 
 > **Ethics and scope:** This write-up covers a fictional investigation in an authorized TryHackMe lab. The room was inspired by a real cargo theft, but all entities, people, documents, and investigative findings in the challenge are fictional. Indicators in this document must not be used to attribute real-world wrongdoing.
 
 ---
 
-## Introduction
+## 📌 Introduction
 
 On March 26, 2026, a refrigerated truck operated by TransEuro Logistics s.r.o. disappeared while transporting approximately 413,793 KitKat units from Italy to Poland. The shipment weighed about 12 tonnes and was expected to cross Austria and the Czech Republic. Missed check-ins and the apparent prior knowledge of the route and monitoring process raised the possibility of insider involvement.
 
@@ -27,7 +36,7 @@ This write-up reconstructs the investigation chronologically. It deliberately di
 
 ---
 
-## Objectives
+## 🎯 Objectives
 
 - Identify the VPN service used to send the anonymous email.
 - Geolocate the petrol station where the missing vehicle was last seen.
@@ -40,7 +49,7 @@ This write-up reconstructs the investigation chronologically. It deliberately di
 
 ---
 
-## Environment and Evidence
+## 🧰 Environment and Evidence
 
 The investigation was performed in a Kali Linux environment using the files supplied by the room.
 
@@ -69,7 +78,7 @@ The investigation was performed in a Kali Linux environment using the files supp
 
 ---
 
-## Methodology
+## 🧭 Methodology
 
 1. Read the ECTA briefing and establish the incident scope.
 2. Parse the email headers and isolate the client-originating IP.
@@ -83,7 +92,7 @@ The investigation was performed in a Kali Linux environment using the files supp
 
 ---
 
-## Step-by-Step Investigation
+## 🔬 Step-by-Step Investigation
 
 ### 1. Establishing the Case Context
 
@@ -352,7 +361,7 @@ No Epieos result or public-profile screenshot was preserved. Therefore, this wri
 
 ---
 
-## Consolidated Timeline
+## ⏱️ Consolidated Timeline
 
 | Date and time | Event | Source | Confidence |
 | --- | --- | --- | --- |
@@ -369,7 +378,7 @@ No Epieos result or public-profile screenshot was preserved. Therefore, this wri
 
 ---
 
-## Evidence and Indicators
+## 🧩 Evidence and Indicators
 
 | Type | Indicator | Relevance | Evidentiary status |
 | --- | --- | --- | --- |
@@ -399,7 +408,7 @@ No Epieos result or public-profile screenshot was preserved. Therefore, this wri
 
 ---
 
-## Commands and Preserved Results
+## 💻 Commands and Preserved Results
 
 The following commands are the complete command set documented by the source report. Commands without preserved output are explicitly marked as reproduction procedures.
 
@@ -464,7 +473,7 @@ Action: EXPORT
 
 ---
 
-## Questions and Validated Answers
+## ✅ Questions and Validated Answers
 
 | # | TryHackMe question | Validated answer | Basis |
 | --- | --- | --- | --- |
@@ -477,7 +486,7 @@ Action: EXPORT
 
 ---
 
-## Defensive Recommendations
+## 🛡️ Defensive Recommendations
 
 ### Data access and loss prevention
 
@@ -516,7 +525,7 @@ Action: EXPORT
 
 ---
 
-## Limitations
+## ⚠️ Limitations
 
 Four conclusions were accepted by the platform but lack a fully preserved independent verification trail:
 
@@ -529,7 +538,7 @@ These gaps do not change the six accepted challenge answers. They do affect how 
 
 ---
 
-## Conclusion
+## 🏁 Conclusion
 
 The Have a Break investigation demonstrates how a seemingly small set of heterogeneous artifacts can reveal an insider-enabled cargo theft scenario. Email headers exposed a VPN egress IP; visual clues narrowed the truck's last known location; access logs revealed a sensitive after-hours export; and internal communications helped separate the whistleblower from the suspected leaker.
 
@@ -539,7 +548,7 @@ The strongest lesson is methodological: observations, hypotheses, and validated 
 
 ---
 
-## Lessons Learned
+## 🧠 Lessons Learned
 
 - Email `Received` headers must be interpreted hop by hop; not every IP belongs to the sender.
 - VPN exit-node geolocation identifies infrastructure, not a person's physical location.
@@ -553,10 +562,20 @@ The strongest lesson is methodological: observations, hypotheses, and validated 
 
 ---
 
-## Final Thoughts
+## 💭 Final Thoughts
 
 Have a Break is a strong exercise in evidence correlation because no single artifact resolves the case. Its greatest value is the requirement to combine email metadata, network intelligence, GEOINT, corporate logs, internal communications, and OSINT while keeping the confidence of each conclusion explicit.
 
-## Challenge Rating
+## ⭐ Challenge Rating
 
 ⭐⭐⭐⭐ (Excellent practice for multidisciplinary investigation, evidence correlation, and insider-threat analysis)
+
+---
+
+<div align="center">
+
+[⬆️ Back to top](#top) · [🏠 Explore all write-ups](../README.md)
+
+`Authorized lab` · `Educational use only`
+
+</div>
