@@ -60,17 +60,37 @@ Each folder corresponds to a TryHackMe room, with its own write-up and artifacts
 | 📬 **Smag Grotto** | PCAP credentials, command injection and cron abuse | Easy | [Open write-up](./smagGrotto/README.md) |
 | 🧱 **Bricks Heist** | WordPress exploitation and threat attribution | Medium | [Open write-up](./tryHack3MBricksHeist/README.md) |
 
+## 🛡️ Security Toolkit
 
-## 🧰 Tools Commonly Used
+Tools I use for learning and authorized security labs.
 
-- `nmap`, `rustscan`
-- `gobuster`, `ffuf`
-- `Burp Suite`
-- `Metasploit`
-- `Hydra`, `John the Ripper`, `Hashcat`
-- `LinPEAS`, `WinPEAS`, `pspy`
-- `Python`, `Bash`, `Go`, `PowerShell`
-- `Wireshark`, `tcpdump`
+**Reconnaissance & web testing**  
+![Nmap](https://img.shields.io/badge/Nmap-4D4D4D?style=flat)
+![RustScan](https://img.shields.io/badge/RustScan-4D4D4D?style=flat)
+![Gobuster](https://img.shields.io/badge/Gobuster-4D4D4D?style=flat)
+![ffuf](https://img.shields.io/badge/ffuf-4D4D4D?style=flat)
+![Burp Suite](https://img.shields.io/badge/Burp%20Suite-FF6633?style=flat)
+
+**Exploitation & password auditing**  
+![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=flat)
+![Hydra](https://img.shields.io/badge/Hydra-4D4D4D?style=flat)
+![John the Ripper](https://img.shields.io/badge/John%20the%20Ripper-4D4D4D?style=flat)
+![Hashcat](https://img.shields.io/badge/Hashcat-4D4D4D?style=flat)
+
+**Linux & Windows enumeration**  
+![LinPEAS](https://img.shields.io/badge/LinPEAS-4D4D4D?style=flat)
+![WinPEAS](https://img.shields.io/badge/WinPEAS-4D4D4D?style=flat)
+![pspy](https://img.shields.io/badge/pspy-4D4D4D?style=flat)
+
+**Scripting & automation**  
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat)
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat)
+
+**Network traffic analysis**  
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat)
+![tcpdump](https://img.shields.io/badge/tcpdump-4D4D4D?style=flat)
 
 ---
 
