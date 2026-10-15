@@ -60,19 +60,6 @@ Each folder corresponds to a TryHackMe room, with its own write-up and artifacts
 | 📬 **Smag Grotto** | PCAP credentials, command injection and cron abuse | Easy | [Open write-up](./smagGrotto/README.md) |
 | 🧱 **Bricks Heist** | WordPress exploitation and threat attribution | Medium | [Open write-up](./tryHack3MBricksHeist/README.md) |
 
-```mermaid
-flowchart LR
-    A[🔎 Recon] --> B[🧭 Enumeration]
-    B --> C[⚡ Exploitation]
-    C --> D[🔐 Privilege Escalation]
-    D --> E[📝 Evidence & Reporting]
-
-    style A fill:#6c5ce7,color:#fff,stroke:#a29bfe
-    style B fill:#0984e3,color:#fff,stroke:#74b9ff
-    style C fill:#d63031,color:#fff,stroke:#ff7675
-    style D fill:#e17055,color:#fff,stroke:#fab1a0
-    style E fill:#00b894,color:#fff,stroke:#55efc4
-```
 
 ## 🧰 Tools Commonly Used
 
